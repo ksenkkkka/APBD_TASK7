@@ -1,55 +1,41 @@
-# Prerequisites
-*.d
+## User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+## Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+[Ll]og/
+[Ll]ogs/
 
-# Linker output
-*.ilk
-*.map
-*.exp
+## Visual Studio cache/options
+.vs/
+*.vsidx
+*.lock.json
 
-# Precompiled Headers
-*.gch
-*.pch
+## Rider / JetBrains
+.idea/
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+## VS Code
+.vscode/
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
+## Tooling
+*.tlog
+*.cache
 *.pdb
+*.dll
+*.exe
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+## Environment
+appsettings.Development.json
 
-# debug information files
-*.dwo
+## OS
+Thumbs.db
+.DS_Store
