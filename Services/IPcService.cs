@@ -3,9 +3,9 @@ using APBD_TASK7.DTOs;
 
 public interface IPcService
 {
-    Task<IEnumerable<PcDto>> GetAllPcsAsync();
+    Task<IEnumerable<PCDto>> GetAllPcsAsync();
     Task<PcComponentsResponse?> GetPcComponentsAsync(int id);
-    Task<PcDto> CreatePcAsync(CreatePcRequest request);
+    Task<PCDto> CreatePcAsync(CreatePcRequest request);
     Task<bool> UpdatePcAsync(int id, UpdatePcRequest request);
     Task<bool> DeletePcAsync(int id);
 }

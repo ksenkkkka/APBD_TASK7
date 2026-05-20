@@ -4,14 +4,14 @@ using APBD_TASK7.Repositories;
 
 public class PcService : IPcService
 {
-    private readonly IPcRepository _repository;
+    private readonly IPCRepository _repository;
 
-    public PcService(IPcRepository repository)
+    public PcService(IPCRepository repository)
     {
         _repository = repository;
     }
 
-    public Task<IEnumerable<PcDto>> GetAllPcsAsync()
+    public Task<IEnumerable<PCDto>> GetAllPcsAsync()
     {
         return _repository.GetAllPcsAsync();
     }
@@ -21,7 +21,7 @@ public class PcService : IPcService
         return _repository.GetPcComponentsAsync(id);
     }
 
-    public Task<PcDto> CreatePcAsync(CreatePcRequest request)
+    public Task<PCDto> CreatePcAsync(CreatePcRequest request)
     {
         return _repository.CreatePcAsync(request);
     }

@@ -1,15 +1,15 @@
-﻿@APBD_TASK_7_HostAddress = http://localhost:5041
+﻿@APBD_TASK7_HostAddress = http://localhost:5041
 
 ### Get a customer's rental history
-GET {{APBD_TASK_7_HostAddress}}/api/customers/1/rentals
+GET {{APBD_TASK7_HostAddress}}/api/customers/1/rentals
 Accept: application/json
 
 ### Get a non-existent customer (expect 404)
-GET {{APBD_TASK_7_HostAddress}}/api/customers/9999/rentals
+GET {{APBD_TASK7_HostAddress}}/api/customers/9999/rentals
 Accept: application/json
 
 ### Add a new rental for customer 1
-POST {{APBD_TASK_7_HostAddress}}/api/customers/1/rentals
+POST {{APBD_TASK7_HostAddress}}/api/customers/1/rentals
 Content-Type: application/json
 
 {

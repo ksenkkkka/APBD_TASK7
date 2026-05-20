@@ -10,7 +10,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
 
 
-builder.Services.AddScoped<IPcRepository, PcRepository>();
+builder.Services.AddScoped<IPCRepository, PCRepository>();
 builder.Services.AddScoped<IPcService, PcService>();
 
 var app = builder.Build();

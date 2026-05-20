@@ -14,10 +14,10 @@ public class PCRepository : IPCRepository
         _context = context;
     }
 
-    public async Task<IEnumerable<PcDto>> GetAllPcsAsync()
+    public async Task<IEnumerable<PCDto>> GetAllPcsAsync()
     {
         return await _context.PCs
-            .Select(pc => new PcDto
+            .Select(pc => new PCDto
             {
                 Id = pc.Id,
                 Name = pc.Name,
@@ -57,7 +57,7 @@ public class PCRepository : IPCRepository
         };
     }
 
-    public async Task<PcDto> CreatePcAsync(CreatePcRequest request)
+    public async Task<PCDto> CreatePcAsync(CreatePcRequest request)
     {
         var pc = new PC
         {
@@ -71,7 +71,7 @@ public class PCRepository : IPCRepository
         _context.PCs.Add(pc);
         await _context.SaveChangesAsync();
 
-        return new PcDto
+        return new PCDto
         {
             Id = pc.Id,
             Name = pc.Name,

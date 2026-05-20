@@ -1,4 +1,4 @@
-﻿namespace APBD_TASK_7.Controllers;
+﻿namespace APBD_TASK7.Controllers;
 using APBD_TASK7.DTOs;
 using APBD_TASK7.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -9,7 +9,7 @@ public class PCsController : ControllerBase
 {
     private readonly IPcService _pcService;
 
-    public PcsController(IPcService pcService)
+    public PCsController(IPcService pcService)
     {
         _pcService = pcService;
     }

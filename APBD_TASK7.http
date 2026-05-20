@@ -1,36 +1,37 @@
-﻿@APBD_TASK_7_HostAddress = http://localhost:5041
-
-### Get a customer's rental history
-GET {{APBD_TASK_7_HostAddress}}/api/customers/1/rentals
+﻿GET http://localhost:5041/api/pcs
 Accept: application/json
 
-### Get a non-existent customer (expect 404)
-GET {{APBD_TASK_7_HostAddress}}/api/customers/9999/rentals
+###
+
+GET http://localhost:5041/api/pcs/1/components
 Accept: application/json
 
-### Add a new rental for customer 1
-POST {{APBD_TASK_7_HostAddress}}/api/customers/1/rentals
+###
+
+POST http://localhost:5041/api/pcs
 Content-Type: application/json
 
 {
-  "id": 1010,
-  "rentalDate": "2025-05-05",
-  "movies": [
-    { "title": "Inception",    "rentalPrice": 2.2 },
-    { "title": "Interstellar", "rentalPrice": 3.2 }
-  ]
-}
-
-### Add a rental with an unknown movie (expect 404)
-POST {{APBD_TASK_7_HostAddress}}/api/customers/1/rentals
-Content-Type: application/json
-
-{
-  "id": 1011,
-  "rentalDate": "2025-05-06",
-  "movies": [
-    { "title": "Incepion", "rentalPrice": 2.2 }
-  ]
+  "name": "Gaming Beast X",
+  "weight": 12.5,
+  "warranty": 36,
+  "createdAt": "2026-05-08T09:00:00",
+  "stock": 5
 }
 
 ###
+
+PUT http://localhost:5041/api/pcs/1
+Content-Type: application/json
+
+{
+  "name": "Gaming Beast X",
+  "weight": 12.5,
+  "warranty": 36,
+  "createdAt": "2026-05-08T09:00:00",
+  "stock": 5
+}
+
+###
+
+DELETE http://localhost:5041/api/pcs/1
